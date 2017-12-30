@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const router = require('./src/router');
+const db = require('./src/db');
 
 // Create Express webapp
 const app = express();

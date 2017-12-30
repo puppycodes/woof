@@ -16,7 +16,7 @@
 
       Twilio.Device.ready(function (device) {
         log('woof!');
-        document.getElementById('call-controls').style.display = 'block';
+        $('#call-controls').show();
       });
 
       Twilio.Device.error(function (error) {
@@ -25,14 +25,14 @@
 
       Twilio.Device.connect(function (conn) {
         log('call established...');
-        document.getElementById('button-call').addClass('live');
+        $('#button-call').addClass('live');
         volumeIndicators.style.display = 'block';
         bindVolumeIndicators(conn);
       });
 
       Twilio.Device.disconnect(function (conn) {
         log('hung up!');
-        document.getElementById('button-call').removeClass('live');
+        $('#button-call').removeClass('live');
         volumeIndicators.style.display = 'none';
       });
 
@@ -111,8 +111,6 @@
   }
 
 });
-
-
 
 
 // Activity log
