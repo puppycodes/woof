@@ -6,21 +6,11 @@
 </head>
 <body>
   <div id="controls">
-    <!-- <div id="info">
 
-      <div id="client-name"></div>
-      <div id="output-selection">
-        <label>Ringtone Devices</label>
-        <select id="ringtone-devices" multiple></select>
-        <label>Speaker Devices</label>
-        <select id="speaker-devices" multiple></select><br/>
-        <a id="get-devices">Seeing unknown devices?</a>
-      </div>
-    </div> -->
     <div id="call-controls">
-      <input id="phone-number" type="text" placeholder="" />
-      <button id="button-call">Call</button>
-      <button id="button-hangup">Hangup</button>
+      <input id="phone-number" class="keypad" disabled="disabled" type="text" placeholder="" />
+      <div id="keypad"></div>
+
       <div id="volume-indicators">
         <label>Mic Volume</label>
         <div id="input-volume"></div><br/><br/>
@@ -28,11 +18,30 @@
         <div id="output-volume"></div>
       </div>
     </div>
-    <div style="display:none;" id="log"></div>
+
+    <div id="log"></div>
   </div>
 
   <script type="text/javascript" src="//media.twiliocdn.com/sdk/js/client/v1.4/twilio.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="quickstart.js"></script>
+
+  <script src="jquery.keypad.js"></script>
+
+  <script type="text/javascript">
+        $(document).ready(function() {
+            $('#keypad').keypad();
+            $('input').change(function() {
+
+            });
+            $('form').submit(function(e) {
+                e.preventDefault();
+                console.log($('input.keypad').val());
+            });
+        });
+    </script>
+
+
+        <script src="quickstart.js"></script>
+
 </body>
 </html>

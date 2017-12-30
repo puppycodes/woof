@@ -1,5 +1,5 @@
 ﻿@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
-
+button:focus {outline:0;}
 body,
 p {
   padding: 0;
@@ -7,7 +7,7 @@ p {
 }
 
 body {
-  background: #272726;
+
 }
 
 label {
@@ -18,131 +18,175 @@ label {
   display: block;
 }
 
-div#controls {
-  padding: 3em;
-  max-width: 1200px;
-  margin: 0 auto;
+#button-call {
+  background-image: url('icons/phone.png');
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
 }
 
-  div#controls div {
-    float: left;
-  }
+#button-call.live {
+  background-image: url('icons/hangup.png');
+}
 
-    div#controls div#call-controls,
-    div#controls div#info {
-      width: 16em;
-      margin: 0 1.5em;
-      text-align: center;
-    }
-      div#controls div#info div#output-selection {
-        display: none;
-      }
+.delete {
 
-      div#controls div#info a {
-        font-size: 1.1em;
-        color: khaki;
-        text-decoration: underline;
-        cursor: pointer;
-      }
+  background-image: url('icons/delete.png');
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
 
-      div#controls div#info select {
-        width: 300px;
-        height: 60px;
-        margin-bottom: 2em;
-      }
+}
 
-      div#controls div#info label {
-        width: 300px;
-      }
+#button-hangup {
+  background-image: url('icons/phone.png');
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
 
-      div#controls div#call-controls div#volume-indicators {
-        display: none;
-        padding: 10px;
-        margin-top: 20px;
-        width: 500px;
-        text-align: left;
-      }
+}
 
-        div#controls div#call-controls div#volume-indicators > div {
-          display: block;
-          height: 20px;
-          width: 0;
-        }
+.keypad button {
+  display: block;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  color: white;
+  background-color: #CC4331;
+  border-radius: 4px;
 
-  div#controls p.instructions {
-    text-align: left;
-    margin-bottom: 1em;
-    font-family: Helvetica-LightOblique, Helvetica, sans-serif;
-    font-style: oblique;
-    font-size: 1.25em;
-    color: #777776;
-  }
+  text-shadow: 0 -1px -1px #af3a2a;
+  -moz-box-shadow: 0 4px 0 #af3a2a, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 0 #af3a2a, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 0 #af3a2a, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  float: left;
+  width: 28%;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 50px;
+}
 
-  div#controls div#info #client-name {
-    text-align: left;
-    margin-bottom: 1em;
-    font-family: "Helvetica Light", Helvetica, sans-serif;
-    font-size: 1.25em;
-    color: #777776;
-  }
+.keypad button:hover {
+  background-color: #d25544;
+    text-shadow: 0 -1px -1px #c4402f;
+    -moz-box-shadow: 0 4px 0 #c4402f, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 0 #c4402f, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 0 #c4402f, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+}
 
-  div#controls button {
-    width: 15em;
-    height: 2.5em;
-    margin-top: 1.75em;
-    border-radius: 1em;
-    font-family: "Helvetica Light", Helvetica, sans-serif;
-    font-size: .8em;
-    font-weight: lighter;
-    outline: 0;
-  }
+.keypad button:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
-    div#controls button:active {
-      position: relative;
-      top: 1px;
-    }
+div#controls {
+  max-width: 1200px;
+  display: inline-block;
+}
 
-  div#controls div#call-controls {
-    display: none;
-  }
+div#controls div#call-controls,
+div#controls div#info {
 
-    div#controls div#call-controls input {
-      font-family: Helvetica-LightOblique, Helvetica, sans-serif;
-      font-style: oblique;
-      font-size: 1em;
-      width: 100%;
-      height: 2.5em;
-      padding: .5em;
-      display: block;
-    }
+}
 
-    div#controls div#call-controls button {
-      color: #fff;
-      background: 0 0;
-      border: 1px solid #686865;
-    }
+div#controls div#info div#output-selection {
+  display: none;
+}
 
-      div#controls div#call-controls button#button-hangup {
-        display: none;
-      }
+div#controls div#info a {
+  font-size: 1.1em;
+  color: khaki;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-  div#controls div#log {
-    border: 1px solid #686865;
-    width: 35%;
-    height: 9.5em;
-    margin-top: 2.75em;
-    text-align: left;
-    padding: 1.5em;
-    float: right;
-    overflow-y: scroll;
-  }
+div#controls div#info select {
+  width: 300px;
+  height: 60px;
+  margin-bottom: 2em;
+}
 
-    div#controls div#log p {
-      color: #686865;
-      font-family: 'Share Tech Mono', 'Courier New', Courier, fixed-width;
-      font-size: 1.25em;
-      line-height: 1.25em;
-      margin-left: 1em;
-      text-indent: -1.25em;
-      width: 90%;
-    }
+div#controls div#info label {
+  width: 300px;
+}
+
+div#controls div#call-controls div#volume-indicators {
+  display: none;
+  padding: 10px;
+  margin-top: 20px;
+  width: 500px;
+  text-align: left;
+}
+
+div#controls div#call-controls div#volume-indicators > div {
+  display: block;
+  height: 20px;
+  width: 0;
+}
+
+div#controls p.instructions {
+  text-align: left;
+  margin-bottom: 1em;
+  font-family: Helvetica-LightOblique, Helvetica, sans-serif;
+  font-style: oblique;
+  font-size: 1.25em;
+  color: #777776;
+}
+
+div#controls div#info #client-name {
+  text-align: left;
+  margin-bottom: 1em;
+  font-family: "Helvetica Light", Helvetica, sans-serif;
+  font-size: 1.25em;
+  color: #777776;
+}
+
+div#controls button {
+
+}
+
+div#controls button:active {
+  position: relative;
+  top: 1px;
+}
+
+div#controls div#call-controls {
+  display: none;
+}
+
+div#controls div#call-controls input {
+  display: block;
+}
+
+
+div#controls div#call-controls button#button-hangup {
+  display: none;
+}
+
+div#controls div#log {
+  width: 35%;
+  height: 9.5em;
+  margin-top: 2.75em;
+  text-align: left;
+  padding: 1.5em;
+  float: right;
+  overflow-y: scroll;
+  position: absolute;
+  font-size: 12px;
+  bottom: 0;
+}
+
+.delete {
+  float: left;
+}
+
+.submit {
+  float: right;
+}
