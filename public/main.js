@@ -25,14 +25,13 @@
 
       Twilio.Device.connect(function (conn) {
         log('call established...');
-        $('#button-call').addClass('live');
         volumeIndicators.style.display = 'block';
         bindVolumeIndicators(conn);
       });
 
       Twilio.Device.disconnect(function (conn) {
         log('hung up!');
-        $('#button-call').removeClass('live');
+
         volumeIndicators.style.display = 'none';
       });
 
@@ -56,6 +55,7 @@
         document.getElementById('output-selection').style.display = 'block';
       }
     })
+
     .fail(function () {
       log('Could not get a token from server!');
     });
@@ -68,23 +68,15 @@
     };
 
     $( "#button-call" ).toggleClass('live');
-
     if ($( "#button-call" ).hasClass( "live" )) {
       console.log('Calling ' + params.To + '...');
       Twilio.Device.connect(params);
     }
-
     else {
       log('Hanging up...');
       Twilio.Device.disconnectAll();
     }
-
   };
-
-
-
-
-
 
   function bindVolumeIndicators(connection) {
     connection.volume(function(inputVolume, outputVolume) {
@@ -124,3 +116,25 @@ function log(message) {
 function setClientNameUI(clientName) {
   console.log(clientName);
 }
+
+$(function () {
+  $('.dtmf-interface li').click(function () {
+    var number = $(this).text();
+    var input = $( "#phone-number" );
+    input.val(input.val() + number);
+  });
+});
+
+
+/* keypress */
+
+$(document).keypress(function (e) {
+    if (e.which == 49) {
+      $('.one').mousedown();
+      $('.one').click();
+      setTimeout(function(){
+           $('.one').mouseup();
+       }, 100)
+
+    };
+  });

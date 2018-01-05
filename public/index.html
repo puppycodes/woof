@@ -3,49 +3,51 @@
 <head>
   <title>Woof!</title>
   <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="buttons.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script type="text/javascript" src="//media.twiliocdn.com/sdk/js/client/v1.4/twilio.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
+
 <body>
 
   <button class="contacts"> Contact Insert </button>
-  <div id="controls">
-
-    <div id="call-controls">
-      <input id="phone-number" class="keypad" disabled="disabled" type="text" placeholder="" />
-      <div id="keypad"></div>
-
-      <div id="volume-indicators">
-        <label>Mic Volume</label>
-        <div id="input-volume"></div><br/><br/>
-        <label>Output Volume</label>
-        <div id="output-volume"></div>
+    <div id="controls">
+      <div id="call-controls">
+        <input id="phone-number" class="keypad" disabled="disabled" type="text" placeholder="" />
+        <div id="keypad"></div>
+        <div id="volume-indicators">
+          <label>Mic Volume</label>
+          <div id="input-volume"></div>
+          <br/><br/>
+          <label>Output Volume</label>
+          <div id="output-volume"></div>
+        </div>
       </div>
+      <button id="button-call"></button>
+      <div id="log"></div>
     </div>
 
-    <div id="log"></div>
+  <div class="wrapper">
+    <ul class='dtmf-interface js-dtmf-interface'>
+      <li class="one">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>*</li>
+      <li>0</li>
+      <li>#</li>
+    </ul>
   </div>
 
-  <script src="jquery.keypad.js"></script>
 
-  <script type="text/javascript">
-        $(document).ready(function() {
-            $('#keypad').keypad();
-            $('input').change(function() {
-
-            });
-            $('form').submit(function(e) {
-                e.preventDefault();
-                console.log($('input.keypad').val());
-            });
-        });
-    </script>
-
-  
-
-
-        <script src="quickstart.js"></script>
+<script src="main.js"></script>
+<script src="dtfm.js"></script>
 
 </body>
 </html>

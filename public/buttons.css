@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:400);
+
+body{
+  background: #f8f8f8;
+  font-family:Karla, sans-serif;
+}
+
+.wrapper{
+	width:250px;
+	height:310px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-155px 0 0 -125px;
+  text-align:center;
+}
+
+
+.dtmf-interface{
+  width:250px;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+.dtmf-interface li{
+  float:left;
+  margin:10px;
+  list-style:none;
+  width:30px;
+  height:30px;
+  text-align:center;
+  line-height:30px;
+  font-size: 24px;
+  border: solid 1px #333;
+  border-radius:3px;
+  padding:15px;
+  transition: all 0.5s;
+}
+
+.dtmf-interface li:hover{
+  color: #3CD9FD;
+  border-color:#3CD9FD;
+  transition-duration:0s;
+  cursor:pointer;
+}
+
+.dtmf-interface li:active{
+  color: #F60;
+  border-color:#F60;
+  transition-duration:0s;
+}
