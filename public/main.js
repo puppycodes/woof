@@ -126,7 +126,27 @@ $(function () {
 });
 
 
+/* Delete Key */
+
+$('.del').click(function () {
+    var el = $("input#phone-number");
+    var the_value = el.val();
+    the_value = the_value.substring(0, the_value.length - 1);
+    el.val(the_value);
+});
+
 /* keypress */
+
+$(document).keypress(function (e) {
+    if (e.which == 48) {
+      $('.zero').mousedown();
+      $('.zero').click();
+      setTimeout(function(){
+           $('.zero').mouseup();
+       }, 100)
+
+    };
+  });
 
 $(document).keypress(function (e) {
     if (e.which == 49) {
@@ -138,3 +158,91 @@ $(document).keypress(function (e) {
 
     };
   });
+
+  $(document).keypress(function (e) {
+      if (e.which == 50) {
+        $('.two').mousedown();
+        $('.two').click();
+        setTimeout(function(){
+             $('.two').mouseup();
+         }, 100)
+
+      };
+    });
+
+    $(document).keypress(function (e) {
+        if (e.which == 51) {
+          $('.three').mousedown();
+          $('.three').click();
+          setTimeout(function(){
+               $('.three').mouseup();
+           }, 100)
+
+        };
+      });
+
+      $(document).keypress(function (e) {
+          if (e.which == 52) {
+            $('.four').mousedown();
+            $('.four').click();
+            setTimeout(function(){
+                 $('.four').mouseup();
+             }, 100)
+
+          };
+        });
+
+        $(document).keypress(function (e) {
+            if (e.which == 53) {
+              $('.five').mousedown();
+              $('.five').click();
+              setTimeout(function(){
+                   $('.five').mouseup();
+               }, 100)
+
+            };
+          });
+
+          $(document).keypress(function (e) {
+              if (e.which == 54) {
+                $('.six').mousedown();
+                $('.six').click();
+                setTimeout(function(){
+                     $('.six').mouseup();
+                 }, 100)
+
+              };
+            });
+
+            $(document).keypress(function (e) {
+                if (e.which == 55) {
+                  $('.seven').mousedown();
+                  $('.seven').click();
+                  setTimeout(function(){
+                       $('.seven').mouseup();
+                   }, 100)
+
+                };
+              });
+
+              $(document).keypress(function (e) {
+                  if (e.which == 56) {
+                    $('.eight').mousedown();
+                    $('.eight').click();
+                    setTimeout(function(){
+                         $('.eight').mouseup();
+                     }, 100)
+
+                  };
+                });
+
+                $(document).keypress(function (e) {
+                    if (e.which == 57) {
+                      $('.nine').mousedown();
+                      $('.nine').click();
+                      setTimeout(function(){
+                           $('.nine').mouseup();
+                       }, 100)
+
+                    };
+                  });

@@ -17,17 +17,8 @@ label {
   display: block;
 }
 
-#button-call {
-  background-image: url('icons/phone.png');
-  background-position: center;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  text-indent: -9999px;
-}
 
-#button-call.live {
-  background-image: url('icons/hangup.png');
-}
+
 
 .delete {
 
@@ -196,7 +187,8 @@ div#controls div#log {
   overflow-y: scroll;
   position: absolute;
   font-size: 12px;
-  bottom: 0;
+  top: 0;
+  left: 0;
 }
 
 .delete {

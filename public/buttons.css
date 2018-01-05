@@ -50,3 +50,37 @@ body{
   border-color:#F60;
   transition-duration:0s;
 }
+
+.clear {
+  opacity: 0;
+}
+
+.del::before {
+  content: "❌";
+}
+
+.del {
+  border: 0px !important;
+  position: relative;
+  left: 16px;
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+#button-call::before {
+  content: "📞";
+}
+
+#button-call {
+  border: 0px !important;
+  position: relative;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+
+button.contacts {
+  display: none;
+}
