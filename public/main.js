@@ -117,13 +117,24 @@ function setClientNameUI(clientName) {
   console.log(clientName);
 }
 
-$(function () {
-  $('.dtmf-interface li').click(function () {
-    var number = $(this).text();
-    var input = $( "#phone-number" );
-    input.val(input.val() + number);
-  });
+// $(function () {
+//   $('.dtmf-interface li').click(function () {
+//     var number = $(this).text();
+//     var input = $( "#phone-number" );
+//     input.val(input.val() + number);
+//   });
+// });
+
+$('.open-log').click(function () {
+$('#log').toggleClass('open');
+$('.open-log').toggleClass('open');
+
 });
+
+$( "#phone-number")
+  .focusout(function() {
+    $("#phone-number").focus();
+  });
 
 
 /* Delete Key */

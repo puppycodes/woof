@@ -5,8 +5,9 @@ p {
   margin: 0;
 }
 
-body {
-
+body{
+  background: #898dff;
+  font-family:Karla, sans-serif;
 }
 
 label {
@@ -157,20 +158,29 @@ div#controls div#call-controls {
 div#controls div#call-controls input {
   display: block;
   padding: 0;
-  width: 95%;
-  margin: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
   text-align: center;
   border: 0;
-  font-size: 50px;
+  font-size: 40px;
+  padding-top: 20px;
+padding-bottom: 20px;
   height: auto;
   font-family: 'Roboto', sans-serif;
+  background-color: #7174c3;
+  border: none;
+  color: transparent;
+  text-shadow: 0 0 0 white;
+  text-align: center;
+  box-shadow: inset 0px -3px 4px -2px rgba(0,0,0,0.75);
 
 }
 
 #call-controls {
 display: block;
-width: 300px;
-height: 310px;
+width: 100%;
 }
 
 div#controls div#call-controls button#button-hangup {
@@ -178,18 +188,52 @@ div#controls div#call-controls button#button-hangup {
 }
 
 div#controls div#log {
-  width: 35%;
-  height: 9.5em;
-  margin-top: 2.75em;
+  width: 200px;
+  height: 100%;
   text-align: left;
   padding: 1.5em;
-  float: right;
+  padding-top: 50px;
   overflow-y: scroll;
   position: absolute;
   font-size: 12px;
+  z-index: 998;
   top: 0;
-  left: 0;
+  left: -250px;
+  color: white;
+  background-color: #4648fd;
+  box-shadow: 0px 0px 19px -2px rgba(0,0,0,0.75);
+
+  -webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
 }
+
+div#controls div#log.open {
+
+  left: 0px;
+
+}
+
+.open-log {
+  z-index: 999;
+  position: absolute;
+  border: 0;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.open-log::before {
+  content: '<';
+}
+
+.open-log.open::before {
+  content: '>';
+}
+
 
 .delete {
   float: left;
@@ -197,4 +241,13 @@ div#controls div#log {
 
 .submit {
   float: right;
+}
+
+.dtmf-interface {
+  display: none;
+}
+
+
+:focus {
+    outline: none;
 }

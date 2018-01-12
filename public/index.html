@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Woof!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="site.css">
   <link rel="stylesheet" href="buttons.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -11,10 +12,13 @@
 
 <body>
 
-  <button class="contacts"> Contact Insert </button>
+  <!-- <button class="contacts"> Contact Insert </button> -->
+
+<button class="open-log"></button>
+
     <div id="controls">
       <div id="call-controls">
-        <input id="phone-number" class="keypad" disabled="disabled" type="text" placeholder="" />
+        <input id="phone-number" class="keypad" autofocus="autofocus" type="text" placeholder="" />
         <div id="keypad"></div>
         <div id="volume-indicators">
           <label>Mic Volume</label>
@@ -43,8 +47,8 @@
       <li class="pound">#</li>
     </ul>
 
-      <button class="del"></button>
-      <button class="clear"></button>
+
+
           <button id="button-call"></button>
 
   </div>
